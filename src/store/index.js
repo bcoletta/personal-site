@@ -6,8 +6,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    password: null,
+  },
+  getters: {
+    password: state => state.password,
   },
   mutations: {
+    setPassword(state, pw) {
+      state.password = pw;
+    },
   },
   actions: {
   },
