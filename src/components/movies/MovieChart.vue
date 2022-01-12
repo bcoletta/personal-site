@@ -19,7 +19,6 @@ export default {
   },
   methods: {
     initChart() {
-      console.log('init');
       this.getPoints().then(() => {
         this.chartData = {
           labels: [ 'Data' ],

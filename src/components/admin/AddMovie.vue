@@ -103,7 +103,6 @@ export default {
       this.formattedDate = `${fullDate.getMonth() + 1}/${fullDate.getDate() + 1}/${fullDate.getFullYear()}`
     },
     searchMovies(val) {
-      console.log({ title: this.title });
       this.loading = true;
       search(this.title).then(res => {
         this.movies = res?.data?.results.map(m => {
@@ -113,7 +112,6 @@ export default {
             image: `https://www.themoviedb.org/t/p/w300_and_h450_bestv2${ m.poster_path }`,
           };
         });
-        console.log({ movies: this.movies });
         this.loading = false;
       });
     },
