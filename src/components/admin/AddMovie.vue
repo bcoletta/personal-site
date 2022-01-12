@@ -52,9 +52,11 @@
       ></v-date-picker>
     </v-menu>
 
-    <v-textarea rows="2" v-model="review" label="Review" />
+    <v-textarea rows="2" v-model="review" label="Review"/>
 
-    <v-btn type="submit">Save</v-btn>
+    <v-btn type="submit" :loading="saving">Save</v-btn>
+
+    <v-alert type="success" v-if="saved" class="mt-4">Success!</v-alert>
   </v-form>
 </template>
 
@@ -77,6 +79,8 @@ export default {
     menu: false,
     valid: true,
     requiredRule: v => !!v || 'Field is required',
+    saving: false,
+    saved: false,
   }),
   computed: {
     payload() {
@@ -86,7 +90,7 @@ export default {
         tmdbId: this.tmdbId,
         e: this.e,
         s: this.s,
-        date: this.date,
+        date: this.formattedDate,
         review: this.review,
       }
     },
@@ -94,13 +98,21 @@ export default {
   methods: {
     add() {
       if (this.valid) {
-        addMovie(this.payload);
+        this.saving = true;
+        this.saved = false;
+        addMovie(this.payload).then(() => {
+          this.saved = true;
+        }).catch(() => {
+          this.saved = false;
+        }).finally(() => {
+          this.saving = false;
+        });
       }
     },
     onDateInput(val) {
       this.$refs.menu.save(this.date);
       const fullDate = new Date(this.date);
-      this.formattedDate = `${fullDate.getMonth() + 1}/${fullDate.getDate() + 1}/${fullDate.getFullYear()}`
+      this.formattedDate = `${ fullDate.getMonth() + 1 }/${ fullDate.getDate() + 1 }/${ fullDate.getFullYear() }`
     },
     searchMovies(val) {
       this.loading = true;
