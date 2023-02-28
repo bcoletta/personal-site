@@ -48,11 +48,11 @@ export default {
     },
     eTotals() {
       if (!this.years) return [];
-      return this.years.map(yr => yr['avg_e']);
+      return this.years.map(yr => parseFloat(yr['avg_e']).toFixed(2));
     },
     sTotals() {
       if (!this.years) return [];
-      return this.years.map(yr => yr['avg_s']);
+      return this.years.map(yr => parseFloat(yr['avg_s']).toFixed(2));
     },
   },
 }
