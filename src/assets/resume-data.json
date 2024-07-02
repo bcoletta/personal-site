@@ -2,15 +2,17 @@
   "work": [
     {
       "title": "Curate",
-      "position": "Senior Front-End Developer",
-      "dates": "May 2021 - Present",
+      "position": "Staff Developer",
+      "dates": "May 2021 - July 2024",
       "points": [
-        "Designed the Front-End architecture for a rebuild of the Curate app using VueJS and Vuetify",
+        "Designed the Front-End architecture for a rebuild of the Curate app using VueJS, Vite, and Vuetify",
         "Designed a system to allow the app to be customized without code",
+        "Worked within a serverless backend framework using AWS AppSync and GraphQL",
+        "Managed microservices using AWS technologies including DynamoDB, Lambda, and RDS",
         "Worked with a designer to theme Vuetify according to their designs",
         "Helped other developers with problems related to VueJS and JavaScript",
-        "Wrote documentation for Front-End systems and processes to help onboard new developers and simplify development",
-        "Reviewed Front-End pull requests from other developers to ensure the code stayed clean and concise"
+        "Wrote documentation for systems and processes to help onboard new developers and simplify development",
+        "Reviewed pull requests from other developers to ensure the code stayed clean and concise"
       ]
     },
     {
