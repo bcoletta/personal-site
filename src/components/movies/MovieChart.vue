@@ -94,17 +94,19 @@ export default {
           z.r = 5;
           z.x = rating.s;
           z.y = rating.e;
+
           let p = this.points.find(point => {
             return parseFloat(point.x) === parseFloat(z.x) && parseFloat(point.y) === parseFloat(z.y);
           });
+
           if (!p) {
             z.label = z.titles.join('\n');
             this.points.push(z);
             resolve();
           } else {
             p.titles.push(z.titles[0]);
-            let sizeToAdd = 6 - p.titles.length;
-            p.r += sizeToAdd > 1 || 1;
+            const sizeIncrease = this.$vuetify.breakpoint.xsOnly ? .1 : .5;
+            p.r = 5 + ((p.titles.length - 1) * sizeIncrease);
             resolve();
           }
         });
