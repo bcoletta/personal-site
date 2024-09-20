@@ -1,6 +1,16 @@
 {
   "work": [
     {
+      "title": "KarmaCheck",
+      "position": "Senior Software Engineer",
+      "dates": "August 2024 - September 2024",
+      "points": [
+        "Debugged and fixed bugs inside a Vue 3 application",
+        "Collaborated with other developers on a rebranding project within a NuxtJS/Vue 3 monorepo",
+        "Laid off after a month as part of a 20% workforce reduction"
+      ]
+    },
+    {
       "title": "Curate",
       "position": "Staff Developer",
       "dates": "May 2021 - July 2024",
