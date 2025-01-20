@@ -17,7 +17,7 @@
         </v-tab>
         <v-tab link to="/movies">
           <v-icon class="mr-2">{{ movieIcon }}</v-icon>
-          Movies
+          Movies <v-icon class="ml-2">mdi-open-in-new</v-icon>
         </v-tab>
       </v-tabs>
 

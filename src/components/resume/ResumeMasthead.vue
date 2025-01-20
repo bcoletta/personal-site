@@ -51,7 +51,7 @@ export default {
         {
           text: 'Resume',
           icon: 'mdi-google-drive',
-          href: 'https://drive.google.com/file/d/1kpbN19E6Y3-XW5Kwxkbfrvs4ahxeQNZ6/view',
+          href: 'https://drive.google.com/file/d/1sBI2f557i-hwYk-QPHbQMqLTUVUg80IG/view',
         },
         {
           text: 'Email',

@@ -21,18 +21,24 @@ const routes = [
   {
     path: '/movies',
     name: 'movies',
-    component: () => import('@/views/Movies'),
+    beforeEnter() {
+      window.location.href = 'https://brendanratesmovies.com';
+    },
     redirect: 'movies/ratings',
     children: [
       {
         path: 'ratings',
         name: 'movie-ratings',
-        component: () => import('@/views/MovieRatings'),
+        beforeEnter() {
+          window.location.href = 'https://brendanratesmovies.com';
+        },
       },
       {
         path: 'stats',
         name: 'movie-stats',
-        component: () => import('@/views/MovieStats'),
+        beforeEnter() {
+          window.location.href = 'https://brendanratesmovies.com';
+        },
       },
     ],
   },
